@@ -1,4 +1,4 @@
-paper
+# Paper
 =====
 
-A simple clean blogging platform
+Paper is a simple and clean blogging platform.
