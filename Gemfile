@@ -19,6 +19,10 @@ group :assets do
   gem 'haml-rails'
 end
 
+group :development do
+  gem 'pry'
+end
+
 group :test do
   gem 'rspec-rails'
 end

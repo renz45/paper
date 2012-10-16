@@ -1,0 +1,11 @@
+= form_for @post, url: admin_posts_url do |f|
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :content
+    %br
+    = f.text_area :content
+  %p
+    = f.submit

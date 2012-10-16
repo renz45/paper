@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008011308) do
+ActiveRecord::Schema.define(:version => 20121016003535) do
 
   create_table "posts", :force => true do |t|
     t.text     "title"
@@ -22,9 +22,13 @@ ActiveRecord::Schema.define(:version => 20121008011308) do
     t.datetime "updated_at",                          :null => false
     t.text     "processed_content"
     t.boolean  "draft",             :default => true
+    t.text     "cached_slug"
   end
 
+  add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
+  add_index "posts", ["cached_slug"], :name => "index_posts_on_cached_slug"
   add_index "posts", ["draft"], :name => "index_posts_on_draft"
+  add_index "posts", ["tag_id"], :name => "index_posts_on_tag_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "post_id"
@@ -32,6 +36,9 @@ ActiveRecord::Schema.define(:version => 20121008011308) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "taggings", ["post_id"], :name => "index_taggings_on_post_id"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
 
   create_table "tags", :force => true do |t|
     t.text     "name"
@@ -53,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20121008011308) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.text     "bio"
+    t.text     "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

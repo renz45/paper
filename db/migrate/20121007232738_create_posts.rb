@@ -8,5 +8,8 @@ class CreatePosts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :posts, :tag_id
+    add_index :posts, :author_id
   end
 end

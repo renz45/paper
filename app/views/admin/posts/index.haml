@@ -1,0 +1,12 @@
+%h1 BLOG
+%p= link_to 'Create New Post', new_admin_post_url
+%ul
+  - @posts.each do |post|
+    %li
+      %h3= link_to post.title, admin_post_url(post)
+      %p= post.processed_content
+      .edit
+        =link_to 'Edit Post', edit_admin_post_url(post)
+
+- if next_page = Post.next_page(current_page: params[:page])
+  .more= link_to 'More Posts', admin_posts_url(page: next_page, per_page: next_page * 5, cumulative: true)
