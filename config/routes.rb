@@ -3,7 +3,7 @@ Paper::Application.routes.draw do
 
   root to: 'posts#index'
 
-  resources :posts, only: [:show]
+  resources :posts, only: [:index, :show]
 
   namespace :admin do
     root to: 'posts#index'
