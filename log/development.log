@@ -4625,3 +4625,718 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:44:51 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2012-10-15 22:46:03 -0400
+Processing by Admin::PostsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+  Rendered admin/posts/index.haml within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts?cumulative=true&page=2&per_page=10" for 127.0.0.1 at 2012-10-15 22:46:07 -0400
+Processing by Admin::PostsController#index as HTML
+  Parameters: {"cumulative"=>"true", "page"=>"2", "per_page"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 10
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (7.8ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:07 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts?cumulative=true&page=3&per_page=15" for 127.0.0.1 at 2012-10-15 22:46:09 -0400
+Processing by Admin::PostsController#index as HTML
+  Parameters: {"cumulative"=>"true", "page"=>"3", "per_page"=>"15"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 15[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts" 
+  Rendered admin/posts/index.haml within layouts/application (8.7ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:09 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:09 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:09 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2012-10-15 22:46:20 -0400
+Processing by Admin::PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/posts/new.haml within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:20 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:20 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/blargy-blarg-title/edit" for 127.0.0.1 at 2012-10-15 22:46:28 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"blargy-blarg-title"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'blargy-blarg-title')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (3.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:28 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:28 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:28 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:28 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/blargy-blarg-title" for 127.0.0.1 at 2012-10-15 22:46:33 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "post"=>{"title"=>"blargy blarg title", "content"=>"content for the blargy vlag"}, "commit"=>"Update Post", "id"=>"blargy-blarg-title"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'blargy-blarg-title')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+  Rendered admin/posts/index.haml within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:33 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:33 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-9th-degree" for 127.0.0.1 at 2012-10-15 22:46:56 -0400
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"post-of-the-9th-degree"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-9th-degree')) LIMIT 1
+  Rendered admin/posts/show.haml within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:56 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:56 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:46:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:46:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-9th-degree/edit" for 127.0.0.1 at 2012-10-15 22:47:00 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"post-of-the-9th-degree"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-9th-degree')) LIMIT 1
+  Rendered admin/posts/edit.haml within layouts/application (3.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:00 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:47:00 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:00 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/post-of-the-9th-degree" for 127.0.0.1 at 2012-10-15 22:47:01 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "post"=>{"title"=>"Post of the 9th degree", "content"=>"Content for the post Post of the 9th degree content some content lalala"}, "commit"=>"Update Post", "id"=>"post-of-the-9th-degree"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-9th-degree')) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 22]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (5.5ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:47:01 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-8th-degree/edit" for 127.0.0.1 at 2012-10-15 22:47:38 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"post-of-the-8th-degree"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (52.9ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:47:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/posts/post-of-the-8th-degree" for 127.0.0.1 at 2012-10-15 22:47:40 -0400
+Processing by Admin::PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "post"=>{"title"=>"Post of the 8th degree", "content"=>"Content for the post Post of the 8th degree content some content lalala"}, "commit"=>"Update Post", "id"=>"post-of-the-8th-degree"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:47:40 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:47:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-8th-degree/edit" for 127.0.0.1 at 2012-10-15 22:48:17 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"post-of-the-8th-degree"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (46.3ms)
+Completed 200 OK in 99ms (Views: 50.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:17 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:48:17 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:17 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:17 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/post-of-the-8th-degree" for 127.0.0.1 at 2012-10-15 22:48:21 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "id"=>"post-of-the-8th-degree"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to 
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `index_url' for #<Admin::PostsController:0x007fc044653e50>):
+  app/controllers/admin/posts_controller.rb:60:in `destroy'
+
+
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started DELETE "/admin/posts/post-of-the-8th-degree" for 127.0.0.1 at 2012-10-15 22:48:35 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "id"=>"post-of-the-8th-degree"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1
+Completed 500 Internal Server Error in 37ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/admin/posts_controller.rb:58:in `destroy'
+
+
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:48:41 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-8th-degree" for 127.0.0.1 at 2012-10-15 22:48:44 -0400
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"post-of-the-8th-degree"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-8th-degree')) LIMIT 1
+  Rendered admin/posts/show.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: %h2= @post.title
+    2: %p= @post.processed_content
+  app/views/admin/posts/show.haml:1:in `_app_views_admin_posts_show_haml__435674890698989754_70231899802980'
+
+
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:48:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:47 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-10-15 22:48:52 -0400
+Processing by Admin::PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (14.6ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:48:52 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:52 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:52 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:52 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-7th-degree/edit" for 127.0.0.1 at 2012-10-15 22:48:53 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"post-of-the-7th-degree"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-7th-degree')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:48:53 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:48:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/post-of-the-7th-degree" for 127.0.0.1 at 2012-10-15 22:48:56 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "id"=>"post-of-the-7th-degree"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-7th-degree')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to 
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `model_name' for ActiveRecord::Relation:Class):
+  app/controllers/admin/posts_controller.rb:7:in `index'
+  app/controllers/admin/posts_controller.rb:60:in `destroy'
+
+
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/adamrensel/.rvm/gems/ruby-1.9.3-p125@paper/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-10-15 22:49:24 -0400
+Processing by Admin::PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (17.5ms)
+Completed 200 OK in 97ms (Views: 19.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:24 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/post-of-the-6th-degree/edit" for 127.0.0.1 at 2012-10-15 22:49:25 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"post-of-the-6th-degree"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-6th-degree')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:25 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:25 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/post-of-the-6th-degree" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "id"=>"post-of-the-6th-degree"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'post-of-the-6th-degree')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/posts
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Processing by Admin::PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (6.3ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:27 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts?cumulative=true&page=2&per_page=10" for 127.0.0.1 at 2012-10-15 22:49:32 -0400
+Processing by Admin::PostsController#index as HTML
+  Parameters: {"cumulative"=>"true", "page"=>"2", "per_page"=>"10"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 10[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+  Rendered admin/posts/index.haml within layouts/application (5.3ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:32 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:32 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2012-10-15 22:49:37 -0400
+Processing by Admin::PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/posts/new.haml within layouts/application (46.2ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:37 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:37 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:37 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/admin/posts" for 127.0.0.1 at 2012-10-15 22:49:41 -0400
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "post"=>{"title"=>"asdlajdkla", "content"=>"lkjas;dkla"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("author_id", "cached_slug", "content", "created_at", "draft", "processed_content", "tag_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author_id", nil], ["cached_slug", "asdlajdkla"], ["content", "lkjas;dkla"], ["created_at", Tue, 16 Oct 2012 02:49:41 UTC +00:00], ["draft", true], ["processed_content", nil], ["tag_id", nil], ["title", "asdlajdkla"], ["updated_at", Tue, 16 Oct 2012 02:49:41 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (4.9ms)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:41 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/posts/asdlajdkla/edit" for 127.0.0.1 at 2012-10-15 22:49:43 -0400
+Processing by Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"asdlajdkla"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'asdlajdkla')) LIMIT 1[0m
+  Rendered admin/posts/edit.haml within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:43 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/admin/posts/asdlajdkla" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Processing by Admin::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zxcRzSKpS35i4WSFIEa6zu5GhrdBpl6RFW/Q5+KgT98=", "id"=>"asdlajdkla"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (("posts"."id" = 0 OR "posts"."cached_slug" = 'asdlajdkla')) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/posts
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Processing by Admin::PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+  Rendered admin/posts/index.haml within layouts/application (6.2ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:49:45 -0400
+Served asset /application.css - 304 Not Modified (0ms)

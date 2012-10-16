@@ -57,8 +57,7 @@ class Admin::PostsController < Admin::ApplicationController
   def destroy
     @post.destroy
     flash[:notice] = 'Post Deleted'
-    get_posts
-    render :index
+    redirect_to admin_posts_url
   end
 
   private
