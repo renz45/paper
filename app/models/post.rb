@@ -14,14 +14,20 @@ class Post < ActiveRecord::Base
   end
 
   def self.all_by_page(args)
-    args[:page] ||= 1
-    args[:per_page] ||= 5
-    args[:cumulative] ||= false
+    page = (args[:page] || 1).to_i
+    per_page = (args[:per_page] || 5).to_i
+    cumulative = args[:cumulative] || false
     if args[:cumulative]
-      self.limit(args[:per_page]).order('created_at DESC')
+      self.limit(per_page).order('created_at DESC')
     else
-      self.offset((args[:page].to_i - 1) * args[:per_page].to_i).limit(args[:per_page]).order('created_at DESC')
+      self.offset((page - 1) * per_page).limit(per_page).order('created_at DESC')
     end
+  end
+
+  def self.find_next(args)
+    page = (args[:page] || 1).to_i
+    per_page = (args[:per_page] || 5).to_i
+    self.offset(page * per_page).limit(per_page).order('created_at DESC').first
   end
 
   def self.max_pages(args)

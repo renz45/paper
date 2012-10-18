@@ -1,9 +1,11 @@
-%h1 BLOG
-%ul
+- content_for :body_class do 'posts-index' end
+
+
+%ul.post-list
   - @posts.each do |post|
-    %li
+    %li{id: post.cached_slug}
       %h3= link_to post.title, post_url(post)
       %p= post.processed_content
 
 - if next_page = Post.next_page(current_page: params[:page])
-  .more= link_to 'More Posts', posts_url(page: next_page, per_page: next_page * 5, cumulative: true)
+  .more= link_to 'More Posts', posts_url(page: next_page, per_page: next_page * 5, cumulative: true, anchor:@next_post.cached_slug)

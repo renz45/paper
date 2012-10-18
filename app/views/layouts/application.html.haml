@@ -6,13 +6,23 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-.body
-  .flash
-    - if flash[:errors]
-      .errors
-        = flash[:errors]
-    - elsif flash[:notice]
-      .notice
-        = flash[:notice]
+%body{class: "#{yield(:body_class)} fixed-sidebar"}
+  #layout
+    .flash
+      - if flash[:errors]
+        .errors
+          = flash[:errors]
+      - elsif flash[:notice]
+        .notice
+          = flash[:notice]
+    .grid-a
+      .cell-a
+        %h1 BLOG
 
-  = yield
+      .cell-b
+        = yield
+
+    // This had to be the last thing in the .layout div
+    #layout-footer
+
+  #footer

@@ -7,14 +7,24 @@
 @import "reset"
 @import "settings"
 @import "base"
+@import "compass/layout.scss"
+@import "compass/utilities/general/clearfix"
+@import "compass/css3/text-shadow"
+
 
 //-----------------------------------------------------------------------
 //  Layouts
 //-----------------------------------------------------------------------
 
+@import "layouts/posts_index"
+
 //-----------------------------------------------------------------------
 //  Modules
 //-----------------------------------------------------------------------
+
+@import "modules/grids"
+@import "modules/buttons"
+@import "modules/footers"
 
 // ----- Buttons ----- //
 
@@ -62,6 +72,19 @@ form
 //-----------------------------------------------------------------------
 
 // Header, Logo, Navigation, Footer, etc.
+
+// Fixed Sidebar
+.fixed-sidebar
+  .grid-a
+    .cell-a
+      position: fixed
+      background: image_url('bgnoise.png') repeat
+    .cell-b
+      background-color: white
+      margin-left: 20.5%
+      padding: 0
+      border-left: 1px solid #ddd
+      border-right: 1px solid #ddd
 
 //-----------------------------------------------------------------------
 //  Controller Name

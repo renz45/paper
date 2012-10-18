@@ -19,5 +19,6 @@ class PostsController < ApplicationController
 
   def get_posts
     @posts = Post.all_by_page(params)
+    @next_post = Post.find_next(params)
   end
 end
