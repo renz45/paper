@@ -34,18 +34,25 @@
       border-right: 1px solid $color-base-highlight
       height: 80px
       line-height: 65px
+      i
+        visibility: hidden
+        color: $color-highlight
+        display: block
+        font-size: 5em
+        width: 12%
+        height: 10%
+        float: left
+      &:hover
+        i
+          visibility: visible
       &:last-child
         border-bottom: 1px solid $color-base-highlight
       a.edit-post
-        padding: 10px 8%
+        padding: 10px 0
         display: block
       h4
+        display: inline-block
         @extend %ellipsis
         color: $color-base
         font-weight: normal
-        i
-          visibility: hidden
-          color: $color-highlight
-        &:hover
-          i
-            visibility: visible
+        width: 86%

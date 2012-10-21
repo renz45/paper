@@ -9,10 +9,9 @@
     %ul.post-list
       - @published_posts.each do |post|
         %li
-          %a{href: edit_admin_post_url(post), class: 'edit-post'}
-            %h4
-              %i.icon-edit
-              =post.title
+          %a{href: edit_admin_post_url(post), class: 'edit-post', title: 'Edit Post'}
+            %i.icon-edit
+            %h4=post.title
     = link_to 'more', '#', class: '.more-published'
 
   .cell-b
@@ -20,8 +19,7 @@
     %ul.post-list
       - @draft_posts.each do |post|
         %li
-          %a{href: edit_admin_post_url(post), class: 'edit-post'}
-            %h4
-              %i.icon-edit
-              = post.title
+          %a{href: edit_admin_post_url(post), class: 'edit-post', title: 'Edit Post'}
+            %i.icon-edit
+            %h4= post.title
     = link_to 'more', '#', class: '.more-drafts'
