@@ -6,7 +6,7 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-%body{class: "#{yield(:body_class)} fixed-sidebar"}
+%body{class: "#{body_class} fixed-sidebar #{yield(:body_class)} "}
   #layout
     .flash
       - if flash[:errors]
