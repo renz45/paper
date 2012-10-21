@@ -5,6 +5,7 @@ gem 'rails', '3.2.8'
 gem 'devise'
 gem 'pg'
 gem 'redcarpet'
+gem 'pygments.rb'
 
 # Heroku needs these
 gem 'sass-rails',   '~> 3.2.3'

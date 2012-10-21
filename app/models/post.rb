@@ -1,5 +1,8 @@
 class Post < ActiveRecord::Base
+  include PostsHelper
   attr_accessible :author_id, :content, :tag_id, :title, :draft
+  
+  before_save :set_processed_content
   before_save :set_slug
   before_create :set_slug
 
@@ -88,19 +91,19 @@ class Post < ActiveRecord::Base
   #
   # Returns array of posts where draft: true
   def self.drafts
-    self.where(draft: true)
+    self.where(draft: true).order('created_at DESC')
   end
 
   # Public: Return all posts that are published, draft: false
   #
   # Returns array of posts where draft: false
   def self.published
-    self.where(draft: false)
+    self.where(draft: false).order('created_at DESC')
   end
 
   # Temporary until the markdown pre_processing is added
   def processed_content
-    content
+    self.read_attribute(:processed_content).html_safe
   end
 
   # Public: converts the title to a slug
@@ -110,6 +113,13 @@ class Post < ActiveRecord::Base
     self.title.parameterize
   end
 
+  def to_param
+    cached_slug
+  end
+
+
+  private
+
 
   # Public: Sets the cached slug value
   #
@@ -118,7 +128,7 @@ class Post < ActiveRecord::Base
     write_attribute(:cached_slug, self.to_slug)
   end
 
-  def to_param
-    cached_slug
+  def set_processed_content
+    write_attribute(:processed_content, markdown(self.content))
   end
 end

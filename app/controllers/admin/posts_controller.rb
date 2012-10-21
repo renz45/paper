@@ -46,8 +46,7 @@ class Admin::PostsController < Admin::ApplicationController
         flash[:notice] = 'Post Updated'
       end
 
-      get_posts
-      render :index
+      redirect_to admin_root_path
     else
       flash[:error] = @post.errors.messages
       render :edit
