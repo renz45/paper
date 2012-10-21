@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def get_posts
-    @posts = Post.all_by_page(params)
-    @next_post = Post.find_next(params)
+    @posts = Post.all_by_page(params).published
+    @next_post = Post.find_next(params.merge(scope: :published))
   end
 end

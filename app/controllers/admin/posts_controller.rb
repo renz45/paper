@@ -3,8 +3,8 @@ class Admin::PostsController < Admin::ApplicationController
   respond_to :html, :json
 
   def index
-    get_posts
-    respond_with(@posts)
+    @published_posts = Post.published
+    @draft_posts = Post.drafts
   end
 
   def show
