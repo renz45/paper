@@ -1,15 +1,14 @@
-.post-list
-  margin: 10%
-  li
-    margin: 10% 0
-
 .posts-index
+  .post-list
+    margin: 10%
+    li
+      margin: 10% 0
   .more
     a
       width: 95.8%
       padding: 1%
-      border-top: 1px solid #ddd
-      border-bottom: 1px solid #ddd
+      border-top: 1px solid $color-base-highlight
+      border-bottom: 1px solid $color-base-highlight
       text-align: center
       font-size: 1.7em
       display: block
@@ -17,4 +16,4 @@
         background-color: $color-highlight
         color: white
         text-decoration: none
-        @include text-shadow(-1px -1px -1px #ccc)
+        @include text-shadow(-1px -1px -1px $color-base-highlight)

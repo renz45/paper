@@ -1,0 +1,51 @@
+.admin-posts-index
+  .new_post
+    width: auto
+    height: 50px
+    line-height: 50px
+    padding: 0 15px
+    font-size: 1.6em
+    display: inline-block
+    margin-left: 4%
+    margin-top: 1%
+    margin: 2% 4% 3% 4%
+    @include border-radius(5px)
+    border: 1px solid $color-base-highlight
+    &:hover
+      background-color: #eee
+
+  .grid-b
+    .cell-a
+      padding: 0
+      &>h3
+        text-align: center
+        margin-bottom: 15px
+    .cell-b
+      &>h3
+        text-align: center
+        margin-bottom: 15px
+      margin-left: -1px
+      padding: 0
+
+  .post-list
+    li
+      border-top: 1px solid $color-base-highlight
+      border-left: 1px solid $color-base-highlight
+      border-right: 1px solid $color-base-highlight
+      height: 80px
+      line-height: 65px
+      &:last-child
+        border-bottom: 1px solid $color-base-highlight
+      a.edit-post
+        padding: 10px 8%
+        display: block
+      h4
+        @extend %ellipsis
+        color: $color-base
+        font-weight: normal
+        i
+          visibility: hidden
+          color: $color-highlight
+        &:hover
+          i
+            visibility: visible
