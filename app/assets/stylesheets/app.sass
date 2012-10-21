@@ -7,16 +7,11 @@
 @import "reset"
 @import "settings"
 @import "base"
+@import "font-awesome"
 @import "compass/layout.scss"
 @import "compass/utilities/general/clearfix"
 @import "compass/css3/text-shadow"
-
-
-//-----------------------------------------------------------------------
-//  Layouts
-//-----------------------------------------------------------------------
-
-@import "layouts/posts_index"
+@import "compass/css3/border-radius"
 
 //-----------------------------------------------------------------------
 //  Modules
@@ -25,6 +20,15 @@
 @import "modules/grids"
 @import "modules/buttons"
 @import "modules/footers"
+
+//-----------------------------------------------------------------------
+//  Layouts
+//-----------------------------------------------------------------------
+
+@import "layouts/posts_index"
+
+//admin styles
+@import "layouts/admin/posts_index"
 
 // ----- Buttons ----- //
 
@@ -72,6 +76,9 @@ form
 //-----------------------------------------------------------------------
 
 // Header, Logo, Navigation, Footer, etc.
+
+.hide
+  display: none
 
 // Fixed Sidebar
 .fixed-sidebar
