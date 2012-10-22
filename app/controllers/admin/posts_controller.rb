@@ -1,7 +1,7 @@
 class Admin::PostsController < Admin::ApplicationController
   include PostsHelper
 
-  before_filter :find_post, except: [:create, :new, :index]
+  before_filter :find_post, except: [:create, :new, :index, :render_preview]
   respond_to :html, :json, :js
 
   def index
