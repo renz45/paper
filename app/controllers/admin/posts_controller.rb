@@ -40,7 +40,6 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def render_preview
-    sleep 1
     respond_with({title: params[:post][:title], content: markdown(params[:post][:content])}.to_json, location: nil)
   end
 

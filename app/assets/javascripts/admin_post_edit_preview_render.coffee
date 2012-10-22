@@ -13,9 +13,18 @@ Blog.AdminPostPreviewRender = ->
     this.preview = options.preview
     this
   start: ->
-    this.updateProcessedOutput()
-  updateProcessedOutput: ->
-    setTimeout(this.updatePost(this), 3000);
+    this.responseReturned = true
+    self = this
+    this.postEditForm.find('#post_title').on 'input propertychange', (evt)->
+      if self.responseReturned
+        self.updatePost(self)
+      else
+        this.needsToUpdatePost = true
+    this.postEditForm.find('#post_content').on 'input propertychange', (evt)->
+      if self.responseReturned
+        self.updatePost(self)
+      else
+        this.needsToUpdatePost = true
   updatePost: (scope)->
     self = scope
     $.ajax
@@ -36,7 +45,9 @@ Blog.AdminPostPreviewRender = ->
   updatePreview: (data)->
     this.updateContent(data.content)
     this.updatetitle(data.title)
-    this.updatePost(this)
+    this.responseReturned = true
+    if this.needsToUpdatePost
+      this.updatePost(this)
   updatetitle: (title)->
     this.preview.find('.title').html(title)
   updateContent: (content)->
