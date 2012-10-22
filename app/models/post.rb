@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   
   before_save :set_processed_content
   before_save :set_slug
+  before_save :set_published_at
   before_create :set_slug
 
   # Public: find a post based on a url slug, the post id or slug is valid
@@ -98,7 +99,7 @@ class Post < ActiveRecord::Base
   #
   # Returns array of posts where draft: false
   def self.published
-    self.where(draft: false).order('created_at DESC')
+    self.where(draft: false).order('published_at DESC')
   end
 
   # Temporary until the markdown pre_processing is added
@@ -130,5 +131,14 @@ class Post < ActiveRecord::Base
 
   def set_processed_content
     write_attribute(:processed_content, markdown(self.content))
+  end
+
+  # Public: Set published_at date. This gets set the first time the post is published
+  #
+  # Returns published_on
+  def set_published_at
+    if draft_changed? && !draft && published_at.nil?
+      write_attribute(:published_at, Time.now)
+    end
   end
 end

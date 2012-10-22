@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_self
 //= require_tree .
 //= code_highlighting
+//= admin_post_edit_preview_render
+
+Blog = {};

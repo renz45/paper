@@ -1,6 +1,8 @@
 class Admin::PostsController < Admin::ApplicationController
+  include PostsHelper
+
   before_filter :find_post, except: [:create, :new, :index]
-  respond_to :html, :json
+  respond_to :html, :json, :js
 
   def index
     @published_posts = Post.published
@@ -37,6 +39,11 @@ class Admin::PostsController < Admin::ApplicationController
     end
   end
 
+  def render_preview
+    sleep 1
+    respond_with({title: params[:post][:title], content: markdown(params[:post][:content])}.to_json, location: nil)
+  end
+
   def update
     if @post.update_attributes(params[:post])
 
@@ -49,7 +56,8 @@ class Admin::PostsController < Admin::ApplicationController
       redirect_to admin_root_path
     else
       flash[:error] = @post.errors.messages
-      render :edit
+
+      format.html { render :edit }
     end
   end
 

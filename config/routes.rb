@@ -7,6 +7,8 @@ Paper::Application.routes.draw do
 
   namespace :admin do
     root to: 'posts#index'
-    resources :posts
+    resources :posts do
+      post :render_preview, on: :collection
+    end
   end
 end

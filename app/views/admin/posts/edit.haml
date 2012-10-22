@@ -1,15 +1,31 @@
-= form_for @post, url: admin_post_url do |f|
-  %p
-    = f.label :title
-    %br
-    = f.text_field :title
-  %p
-    = f.label :content
-    %br
-    = f.text_area :content
-  %p
-    = f.check_box :draft
-    = f.label 'Mark as a draft'
-  %p
-    = f.submit
-    = link_to 'Delete Post', admin_post_url(@post), method: :delete, confirm: 'Are you sure you want to delete this post?'
+.grid-b
+  .cell-a.edit-post
+    = form_for @post, url: admin_post_url do |f|
+      %p
+        = f.label :title
+        %br
+        = f.text_field :title
+      %p
+        = f.label :content
+        %br
+        = f.text_area :content
+      %p
+        = f.check_box :draft
+        = f.label 'Mark as a draft'
+      %p
+        = f.submit
+        = link_to 'Delete Post', admin_post_url(@post), method: :delete, confirm: 'Are you sure you want to delete this post?'
+  .cell-b
+    .preview
+      %h4.title= @post.title
+      .content= @post.processed_content
+
+:javascript
+  previewRenderer = new Blog.AdminPostPreviewRender();
+  previewRenderer.init({
+    postEditForm: $('.edit-post form'),
+    updateURL: "#{render_preview_admin_posts_url}",
+    preview: $('.preview')
+  });
+
+  previewRenderer.start();
